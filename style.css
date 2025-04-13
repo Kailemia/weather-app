@@ -1,38 +1,104 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-    background-color: aliceblue;
-}
-.header {
-    color: aqua;
-    font-size: 1500px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top right, #74ebd5, #acb6e5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-top: 50px;
-}
-.container {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: center;
+    min-height: 100vh;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(145, 140, 140, 0.3);
 }
-h1 {
-    font-size: 20px;
+
+/* Header */
+.header {
+    margin-bottom: 30px;
 }
-input {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+
+.header h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
-button {
-    background-color: #9DFF00;
-    color: black;
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Input & Button */
+#locationInput {
+    padding: 12px;
+    width: 70%;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    outline: none;
 }
+
+#searchButton {
+    padding: 12px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #357ab8;
+}
+
+/* Weather Display */
 .weather {
-    margin-top: 20px;
+    margin-top: 25px;
+    color: #ffffff;
+}
+
+#location {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#temperature {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+#description {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    #locationInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #searchButton {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }
